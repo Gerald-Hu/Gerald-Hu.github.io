@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>GeraldH.me</title>
+        <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+        <link rel="stylesheet" href="./PC.css">
+    </head>
+
+    <body>
+        <div id="header">
+            <span id="icons"><a href="./Personal.html" target="_blank"><img src="./ins.png" height="40px" title="instagram"></a></span>
+            <ul id="navBar">
+                <a href="#"><li> About me</li></a>
+                <a href="#education"><li>Education</li></a>
+                <a href="#experience"><li>Past Experience</li></a>
+                <a href="#photos"><li>Photos</li></a>
+            </ul>
+        </div>
+
+        <h1 id="greet">
+            HI. It's Gerald Hu ('Who').
+        </h1>
+
+        <div id="main">
+
+        <div id="aboutMe">
+            <img id = "portray" src="./XM.png" alt="My photo">
+            <div id = "intro">
+                I'm a fresh grad from the University of Waterloo.<br>
+                <br>
+                Though I made myself a name "Gerald", if you happen to speak Mandarin, 
+                or are down for a challenge, you might also want to call me <b>"Xuān míng"</b>, 
+                which is my real name.<br>
+                <br>
+                <img src="./xuan.png" alt="Caligraphy:Xuan"><img src="./ming.png" alt="Caligraphy:Xuan"><img id = "playButton" src="./playButton1.png" alt="Play Button" width="100px" onclick="play()" onmouseenter="enter()" onmouseleave="leave()"> 
+                <audio id="audio" src="./pronunciation.mp3"></audio><br><br>
+                I was born and raised in China before pursuing a degree and a career in Canada,
+                which exposed me to both Chinese and Canadian culture, as well as enabled me
+                to meet people from everywhere.<br>
+                <br>
+                I enjoy Karaoke, piano, workout, coding, and making cocktails in my leisure time.<br>
+                <br>
+            </div>
+        </div>
+
+        <br><br><br><hr>
+        
+        <div id="education">
+            <img id="uwaterloo" src="./UWaterloo.png" alt="UWaterloo badge">
+            <div id="degreeDetails">
+                <strong>Bechelor of Mathematics earned from the University of Waterloo,<br>
+                    double major + one minor.</strong><br><br>
+                <p>Computational Mathematics <span id="CMInfo"><img id="CMInfo" src="./help.png" width="20px"></span></p>
+                <p>Combinatorics & Optimization <span id="COInfo"><img src="./help.png" width="20px"></span></p>
+                <p>Computing Minor <span id="CInfo"><img src="./help.png" width="20px"></span></p>
+            </div>
+        </div>
+
+        <br><br><hr>
+
+        <div id="experience">
+
+        </div>
+        
+        <br><br><hr>
+
+        <div id="photos">
+
+        </div>
+
+        </div>
+
+        <div id="footer"> 
+            <p>By Gerald H. in Toronto, Canada. </p>
+        </div>
+    </body>
+
+    <script>
+        function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+        function enter(){
+            var image = document.getElementById("playButton");
+            image.src = "./playButton2.png";
+        }
+        function leave(){
+            var image = document.getElementById("playButton");
+            image.src = "./playButton1.png";
+        }
+    </script>
+</html>
