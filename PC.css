@@ -108,7 +108,7 @@ body{
 }
 #uwaterloo{
     width: 42%;
-    min-width: 350px;
+    min-width: 323px;
     transition: all 1.5s;
 }
 #uwaterloo:hover{
