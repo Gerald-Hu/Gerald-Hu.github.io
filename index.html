@@ -1,115 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>GeraldH.me</title>
-        <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1">
-        <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
-        <link rel="stylesheet" href="./PC.css">
-    </head>
 
-    <body>
-        <div id="header">
-            <span id="icons">
-                <a href="#">
-                    <img src="./ins.png" height="40px" title="instagram">
-                </a>
-                <a href="#">
-                    <img id="mail" src="./email.png" height="28px" title="email">
-                </a>
+<head>
+    <title>Gerald Hu | Information</title>
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="icon" type="favicon" href="./public/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <script src="./util/playaudio.js"></script>
+    <script src="./util/shake.js"></script>
+    <script src="./util/carousel.js"></script>
+    <script src="./util/menu.js"></script>
+    <script src="./util/swtichAudioIcon.js"></script>
+    <script src="https://kit.fontawesome.com/3c90380d92.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <span class="header--logo"> <a href="index.html">GH</a></span>
+        <span class="header--icons">
+            <a href="https://www.instagram.com/xming.h">
+                <i class="fa-brands fa-instagram" onmouseenter="addShake(event)" onmouseleave="removeShake(event)"></i>
+            </a>
+            <a href="mailto: hgwdsytq@gmail.com">
+                <i class="fa-regular fa-envelope" onmouseenter="addShake(event)" onmouseleave="removeShake(event)"></i>
+            </a>
+        </span>
+
+        <button class="header--hamburger header--hamburger--emphatic" id="header--hamburger" onclick="toggleMenu()">
+            <span class="header--hamburger-box">
+                <span class="header--hamburger-inner"></span>
             </span>
-            <ul id="navBar">
-                <a href="#"><li> About Me</li></a>
-                <a href="#education"><li>Education</li></a>
-                <a href="#experience"><li>Past Experience</li></a>
-                <a href="#more"><li>More</li></a>
+        </button>
+
+        <div class="header--nav" id="header--menu">
+            <a onclick="toggleMenu()" href="#">
+                <li>About</li>
+            </a>
+            <a onclick="toggleMenu()" href="./public/pages/education.html">
+                <li>Education</li>
+            </a>
+            <a onclick="toggleMenu()" href="#experience">
+                <li>Experience</li>
+            </a>
+            <a onclick="toggleMenu()" href="#more">
+                <li>Contact</li>
+            </a>
             </ul>
-        </div>
+    </header>
 
-        <h1 id="greet">
-            HI. It's Gerald Hu ('Who').
-        </h1>
-
-        <div id="main">
-
-        <div id="aboutMe">
-            <img id = "portray" src="./XM.png" alt="My photo">
-            <div id = "intro">
-                I'm a fresh grad from the University of Waterloo.<br>
-                <br>
-                I made myself a name "Gerald", but if you happen to speak Mandarin, 
-                or are down for a challenge, you might also want to call me <b>"Xuān míng"</b>, 
-                which is my real name.<br>
-                <br>
-                <img src="./xuan.png" alt="Caligraphy:Xuan"><img src="./ming.png" alt="Caligraphy:Xuan"><img id = "playButton" src="./playButton1.png" alt="Play Button" width="100px" onclick="play()" onmouseenter="enter()" onmouseleave="leave()"> 
-                <audio id="audio" src="./pronunciation.mp3"></audio><br><br>
-                I was born and raised in China before pursuing a degree and a career in Canada,
-                which exposed me to both Chinese and Canadian culture, as well as enabled me
-                to meet people from everywhere.<br>
-                <br>
-                Though I've spent years learning and writing math proofs, my passion turns out to end up in coding. 
-                Besides that, I enjoy Karaoke, piano, workout, and making cocktails in my leisure time.<br>
-                <br>
-            </div>
-        </div>
-
-        <br><br><br><hr>
-        
-        <div id="education">
-            <img id="uwaterloo" src="./UWaterloo.png" alt="UWaterloo badge">
-            <div id="degreeDetails">
-                <strong>Bechelor of Mathematics earned from the University of Waterloo,<br>
-                    double major + one minor.</strong><br><br>
-                <p>Computational Mathematics <span id="CMInfo"><img id="CMInfo" src="./help.png" width="20px"></span></p>
-                <p>Combinatorics & Optimization <span id="COInfo"><img src="./help.png" width="20px"></span></p>
-                <p>Computing Minor <span id="CInfo"><img src="./help.png" width="20px"></span></p>
-            </div>
-        </div>
-
-        <br><br><hr>
-
-        <div id="experience" style="text-align:center">
-            <div>
-                <div class="info">
-                The business attempt was launched by me and some peer students, which was inspired by carpooling. We made bi-direction inter-city (Waterloo - GTA) delivery, focusing on dessert and bubble tea, by cooperating with those who offer frequent carpool services. 
-                We developed a Wechat embedded app and a small website to record orders, and managed all delivery details. Though it ceased due to the graduation of team members, our competitor who adopts the same mode is already a registered small business now.(2020) </div>
-                <div class="logo"><img src="./teapool.png" alt="teapool icon" width="323px"></div>
-            </div>
-            <div>
-                <div class="info">
-                Golden Sun tech Ltd. The firm was responsible for the surveillance system for the Gaokao (Chinese college entrance exam) and Zhongkao (Chinese high school entrance exam).  
-                My internship duty involves the development of a control page for proctors. There I learned Java,  how to interact with Apache Tomcat, and some frontend knowledge later on.(2019)
+    <section class="hero section">
+        <div class="hero--introA">
+            <div class="hero--introA--title">
+                <div id="hero--carousel">
+                    Hi.
                 </div>
-                <div class="logo"><img src="./goldsun.png" alt="teapool icon" width="323px"></div>
+                <div class="hero--introA--greet">
+                    I'm Gerald Hu.
+                </div>
             </div>
+            <img class="hero--introA--image" src="./src/images/selfie.png" alt="My photo">
+        </div>
+
+        <div class="hero--introB">
+            <div class="hero--introB--content">
+                I made myself a name "Gerald", but if you you've got a knack for Mandarin or you're up for a bit
+                of fun, you might want to know my real name Xuanming.
+            </div>
+
+            <div class="hero--introB--caligraphy">
+                <img src="./src/images/xuan.png" alt="Caligraphy:Xuan" id="xuan">
+                <img src="./src/images/ming.png" alt="Caligraphy:Ming" id="ming">
+                <img id="playButton" src="./src/images/playButton1.png" alt="Play Button" width="60px" onclick="play()"
+                    onmouseenter="enter()" onmouseleave="leave()">
+                <audio id="audio" src="./src/audio/pronunciation.mp3"></audio><br><br>
+            </div>
+        </div>
+
+        <div class="hero--introC">
+            <div class="hero--introC--content">
+                I'm a fresh grad from the University of Waterloo. Born and raised in China before pursuing
+                degree & career in Canada, I was exposed to both Chinese and Canadian culture and was able
+                meet people around the world.
+
+                <br><br>
+                What do I enjoy:
+                <br>
+                <div class="hero--introC--entertainments">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <i class="fa-solid fa-flag-checkered"></i>
+                    <i class="fa-solid fa-dumbbell"></i>
+                    <i class="fa-solid fa-music"></i>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- <section class="education section">
+        <div class="education--image"><img id="uwaterloo" src="./UWaterloo.png" alt="UWaterloo badge"></div>
+        <div class="education--degreeDetails">
+            <strong>Bechelor of Mathematics earned from the University of Waterloo,<br>
+                double major + one minor.</strong><br><br>
+            <p>Computational Mathematics <span id="CMInfo"><img id="CMInfo" src="./help.png" width="20px"></span>
+            </p>
+            <p>Combinatorics & Optimization <span id="COInfo"><img src="./help.png" width="20px"></span></p>
+            <p>Computing Minor <span id="CInfo"><img src="./help.png" width="20px"></span></p>
+        </div>
+    </section>
+
+    <section class="experience section">
+        <div>
+            <div class="experience--card card">
+                The business attempt was launched by me and some peer students, which was inspired by carpooling. We
+                made bi-direction inter-city (Waterloo - GTA) delivery, focusing on dessert and bubble tea, by
+                cooperating with those who offer frequent carpool services.
+                We developed a Wechat embedded app and a small website to record orders, and managed all delivery
+                details. Though it ceased due to the graduation of team members, our competitor who adopts the same
+                mode is already a registered small business now.(2020) </div>
+            <div class="logo"><img src="./teapool.png" alt="teapool icon" width="323px"></div>
+
+            <div class="experience--card card">
+                Golden Sun tech Ltd. The firm was responsible for the surveillance system for the Gaokao (Chinese
+                college entrance exam) and Zhongkao (Chinese high school entrance exam).
+                My internship duty involves the development of a control page for proctors. There I learned Java,
+                how to interact with Apache Tomcat, and some frontend knowledge later on.(2019)
+            </div>
+            <div class="logo"><img src="./goldsun.png" alt="teapool icon" width="323px"></div>
+
             <div><b>Keep gaining Exp to level up...</b></div>
         </div>
-        
-        <br><br><hr>
+    </section>
 
-        <div id="more" style="text-align:center; font-size: x-large;">
-            Comming Soon!
-        </div>
+    <br><br>
+    <hr>
 
-        </div>
+    <section class="more section">
+        Comming Soon!
+    </section> -->
 
-        <div id="footer"> 
-            <p>By Gerald H. in Toronto, Canada. </p>
-        </div>
-    </body>
 
-    <script>
-        function play() {
-        var audio = document.getElementById("audio");
-        audio.play();
-      }
-        function enter(){
-            var image = document.getElementById("playButton");
-            image.src = "./playButton2.png";
-        }
-        function leave(){
-            var image = document.getElementById("playButton");
-            image.src = "./playButton1.png";
-        }
-    </script>
+    <!-- <footer class="footer">
+        <p>Gerald Hu in Toronto, Canada | Gerald.xmh@gmail.com</p>
+    </footer> -->
+</body>
+
 </html>

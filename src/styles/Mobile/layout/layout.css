@@ -1,0 +1,185 @@
+
+/************** Header **************/
+
+.header{
+    position: fixed;
+    width:100%;
+    font-size: 10rem;
+    height: 15rem;
+    color:black;
+    z-index: 9;
+    background-color: whitesmoke;
+}
+
+.header--logo{
+    position: absolute;
+    left:3.125rem;
+    transform: translateY(-1rem);
+    font-family: 'Pacifico', cursive;
+    color: rgb(52, 1, 87);
+}
+
+.header--icons{
+    font-size: 9rem;
+    position: absolute;
+    right: 17rem;
+    display: inline-flex;
+    width: 30%;
+    height:100%;
+    margin-left: 1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header--icons > a{
+    display: flex;
+    align-items: center;
+    transition: color .4s;
+}
+
+.header--icons >span{
+    transform: translateY(.8rem);
+}
+
+.header--nav{
+    display: none;
+}
+
+.header--nav--expand{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 6rem;
+    background-color: whitesmoke;   
+}
+
+.header--nav--expand::before{
+    content: "";
+    width: 1;
+    height: 5rem;
+}
+
+.header--nav--expand::after{
+    content: "";
+    width: 1;
+    height: 5rem;
+}
+
+.header--hamburger {
+    position: absolute;
+    right:-20px;
+    top:50%;
+    transform: translateY(calc(-50% + 2px));
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+}
+
+.header--hamburger.is-active .header--hamburger-inner,
+.header--hamburger.is-active .header--hamburger-inner::before,
+.header--hamburger.is-active .header--hamburger-inner::after {
+    background-color: #000;
+}
+
+.header--hamburger-box {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    position: relative;
+}
+
+.header--hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+
+.header--hamburger-inner,
+.header--hamburger-inner::before,
+.header--hamburger-inner::after {
+    width: 35px;
+    height: 4px;
+    background-color: black;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+
+.header--hamburger-inner::before,
+.header--hamburger-inner::after {
+    content: "";
+    display: block;
+}
+
+.header--hamburger-inner::before {
+    top: -10px;
+}
+
+.header--hamburger-inner::after {
+    bottom: -10px;
+}
+
+.header--hamburger--emphatic {
+    overflow: hidden;
+}
+
+.header--hamburger--emphatic .header--hamburger-inner {
+    transition: background-color 0.125s 0.175s ease-in;
+}
+
+.header--hamburger--emphatic .header--hamburger-inner::before {
+    left: 0;
+    transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in;
+}
+
+.header--hamburger--emphatic .header--hamburger-inner::after {
+    top: 10px;
+    right: 0;
+    transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in;
+}
+
+.header--hamburger--emphatic.is-active .header--hamburger-inner {
+    transition-delay: 0s;
+    transition-timing-function: ease-out;
+    background-color: transparent !important;
+}
+
+.header--hamburger--emphatic.is-active .header--hamburger-inner::before {
+    left: -80px;
+    top: -80px;
+    transform: translate3d(80px, 80px, 0) rotate(45deg);
+    transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.header--hamburger--emphatic.is-active .header--hamburger-inner::after {
+    right: -80px;
+    top: -80px;
+    transform: translate3d(-80px, 80px, 0) rotate(-45deg);
+    transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/************** Section **************/
+
+.section{
+    height: calc(100vh - 3.5rem);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    min-height: 750px;
+}
+
+/************** Footer **************/

@@ -1,0 +1,22 @@
+html{
+    font-size: calc(.4vw + .4vh);
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+*{
+    margin:0;
+}
+
+li{
+ list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
