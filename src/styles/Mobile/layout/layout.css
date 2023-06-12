@@ -35,6 +35,7 @@
     display: flex;
     align-items: center;
     transition: color .4s;
+    z-index: 1;
 }
 
 .header--icons >span{

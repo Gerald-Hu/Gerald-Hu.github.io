@@ -38,7 +38,7 @@
 
 .hero--introA--greet {
     font-size: 12rem;
-    animation: fade-in 1.5s;
+    animation: shift-in 1.5s;
 }
 
 .hero--introA--image {
@@ -60,7 +60,7 @@
     justify-content: space-around;
     width: 50%;
     height: 25%;
-    animation: shift-in-left 1.5s;
+    animation: fade-in 1.5s;
 }
 
 .hero--introB--caligraphy{
@@ -93,7 +93,7 @@
     width: 90%;
     margin: 5rem auto;
     color: rgb(244, 221, 221);
-    animation: shift-in-right 1.5s;
+    animation: fade-in 1.5s;
 }
 
 .hero--introC--entertainments{
@@ -118,7 +118,7 @@
     animation: delay-in 3.1s;
 }
 
-@keyframes fade-in {
+@keyframes shift-in {
     from {
         opacity: 0;
         transform: translateY(-5rem);
@@ -130,27 +130,13 @@
     }
 }
 
-@keyframes shift-in-left{
+@keyframes fade-in{
     from {
         opacity: 0;
-        transform: translateX(-5rem);
     }
 
     to {
         opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes shift-in-right{
-    from {
-        opacity: 0;
-        transform: translateX(5rem);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
     }
 }
 
