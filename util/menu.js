@@ -12,8 +12,16 @@ const toggleMenu = () => {
     }
 
     if (menu.className === "header--nav") {
+
+        //prevent scroll
+        document.body.style.height = "100vh";
+        document.body.style.overflow = "hidden";
+
         menu.className = "header--nav--expand";
     } else {
+        //enable scroll
+        document.body.style.height = "auto";
+        document.body.style.overflow = "auto";
         menu.className = "header--nav";
     }
 

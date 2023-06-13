@@ -1,0 +1,154 @@
+.education {
+    background-color: #b19d92;
+    height: calc(100vh - 4.7rem);
+    margin-top: 1.2rem;
+}
+
+.education--imageSection {
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.education--imageSection::before {
+    width: 1;
+    height: 1;
+    content: "";
+    display: block;
+}
+
+.education--imageSection::after {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    content: "";
+    display: block;
+    background-color: white;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: 50% 0;
+    transform: translateY(-.5px);
+    animation: flip-in 2s;
+}
+
+.education--imageSection--content {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: rgb(52, 1, 87);
+    z-index: 1;
+    animation: education-fade-in 4s;
+}
+
+#education--imageSection--uwBadge {
+    height: 40rem;
+    z-index: 1;
+    animation:seal 2s;
+}
+
+.education--content {
+    height: 35%;
+    bottom: 0;
+    background-color: #f9d66c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    animation: education-fade-in 4s;
+}
+
+.education--content--title {
+    width: 80%;
+    font-size: 3rem;
+    font-family: 'Pacifico', cursive;
+    color: rgb(68, 45, 45);
+}
+
+.education--degreeContainer {
+    display: flex;
+    width: 70%;
+    height: 10rem;
+    margin-left: -6%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.education--degreeContainer>div {
+    height: 2.5rem;
+    transition: color .5s;
+}
+
+.education--degreeContainer>div:hover {
+    cursor: pointer;
+    color: rgb(68, 45, 45);
+    transform: translateY(-.2rem);
+    text-decoration: underline;
+    height: 3rem;
+}
+
+.education--content--detailContainer {
+    width: 80%;
+    height: 20px;
+    font-size: 1.4rem;
+}
+
+.education--content::after {
+    width: 1;
+    height: 15%;
+    content: "";
+    display: block;
+}
+
+@keyframes flip-in {
+    from {
+        transform: rotateX(90deg);
+    }
+
+    to {
+        transform: rotateX(0)
+    }
+}
+
+@keyframes education-fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes seal {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(120%, 120%);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(100%);
+    }
+
+    90%{
+        transform: scale(110%, 110%);
+    }
+
+    100%{
+        transform: scale(100%);
+    }
+}

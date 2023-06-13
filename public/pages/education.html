@@ -1,12 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <title>Gerald Hu | Education</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="icon" type="favicon" href="/public/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <script src="/util/playaudio.js"></script>
+    <script src="/util/shake.js"></script>
+    <script src="/util/carousel.js"></script>
+    <script src="/util/menu.js"></script>
+    <script src="/util/swtichAudioIcon.js"></script>
+    <script src="https://kit.fontawesome.com/3c90380d92.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div>Education</div>
+    <header class="header">
+        <span class="header--logo"> <a href="/index.html">GH</a></span>
+        <span class="header--icons">
+            <a href="https://www.instagram.com/xming.h">
+                <i class="fa-brands fa-instagram" onmouseenter="addShake(event)" onmouseleave="removeShake(event)"></i>
+            </a>
+            <a href="mailto: hgwdsytq@gmail.com">
+                <i class="fa-regular fa-envelope" onmouseenter="addShake(event)" onmouseleave="removeShake(event)"></i>
+            </a>
+        </span>
+
+        <button class="header--hamburger header--hamburger--emphatic" id="header--hamburger">
+            <span class="header--hamburger-box" onclick="toggleMenu()">
+                <span class="header--hamburger-inner"></span>
+            </span>
+        </button>
+
+        <div class="header--nav" id="header--menu">
+            <a onclick="toggleMenu()" href="/index.html">
+                <li>About</li>
+            </a>
+            <a onclick="toggleMenu()" href="#">
+                <li>Education</li>
+            </a>
+            <a onclick="toggleMenu()" href="./experience.html">
+                <li>Experience</li>
+            </a>
+            <a onclick="toggleMenu()" href="./contact.html">
+                <li>Contact</li>
+            </a>
+            </ul>
+    </header>
+
+    <section class="education section">
+        <div class="education--imageSection">
+            <div class="education--imageSection--content">Bachelor of Mathematics</div>
+            <img id="education--imageSection--uwBadge" src="/src/images/UWaterloo.png" alt="UWaterloo badge">
+        </div>
+
+        <div class="education--content">
+            <strong class="education--content--title">2 majors + 1 minor</strong>
+            <div class="education--degreeContainer">
+                <div>Computational Mathematics</div>
+                <div>Combinatorics & Optimization </div>
+                <div>Computing Minor </div>
+            </div>
+            <div class="education--content--detailContainer">
+                <span id="defaultMsg"> Click on the major specifications above to learn what all those about.</span>
+                <!-- <span id="CMInfo"> CM is Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</span>
+                <span id="COInfo"> CM is Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. </span>
+                <span id="MinorInfo"> Minor is Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</span> -->
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
