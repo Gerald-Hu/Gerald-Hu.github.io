@@ -6,17 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <link rel="icon" type="favicon" href="./public/favicon.ico">
+    <link rel="icon" type="favicon" href="/public/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../src/styles/main.css">
-    <script src="/util/playaudio.js"></script>
     <script src="/util/shake.js"></script>
-    <script src="/util/carousel.js"></script>
     <script src="/util/menu.js"></script>
-    <script src="/util/swtichAudioIcon.js"></script>
+    <script src="/util/card.js"></script>
     <script src="https://kit.fontawesome.com/3c90380d92.js" crossorigin="anonymous"></script>
 </head>
 
@@ -55,25 +53,65 @@
     </header>
 
     <section class="experience section">
-        <div>
-            <div class="experience--card card">
-                The business attempt was launched by me and some peer students, which was inspired by carpooling. We
-                made bi-direction inter-city (Waterloo - GTA) delivery, focusing on dessert and bubble tea, by
-                cooperating with those who offer frequent carpool services.
-                We developed a Wechat embedded app and a small website to record orders, and managed all delivery
-                details. Though it ceased due to the graduation of team members, our competitor who adopts the same
-                mode is already a registered small business now.(2020) </div>
-            <div class="logo"><img src="./teapool.png" alt="teapool icon" width="323px"></div>
+        <div class="experience--title">
+            Experience & Project
+        </div>
+        <div class="experience--cardContainer">
 
-            <div class="experience--card card">
-                Golden Sun tech Ltd. The firm was responsible for the surveillance system for the Gaokao (Chinese
-                college entrance exam) and Zhongkao (Chinese high school entrance exam).
-                My internship duty involves the development of a control page for proctors. There I learned Java,
-                how to interact with Apache Tomcat, and some frontend knowledge later on.(2019)
+            <div class="experience--card" onmouseenter="cardEnter(event)" onmouseleave="cardLeave(event)"
+                onclick="window.open('http://www.ccjinyang.com/')">
+                <div class="experience--card--content">
+                    <p>
+                        The firm was responsible for GaoKao (Chinese college entrance examination) surveillance systems
+                        and school management systems.
+                        During my internship, I developed the control page for a school's surveillance system, using
+                        JavaScript & Html5, as well as a module
+                        for its back end with Java and Apache Tomcat.
+                    </p>
+                </div>
+                <div class="experience--card--cover"><img src="/src/images/goldsun.png" alt="teapool icon"
+                        width="80%"></div>
+                <div class="experience--card--title"> Intern Developer (2019) </div>
             </div>
-            <div class="logo"><img src="./goldsun.png" alt="teapool icon" width="323px"></div>
 
-            <div><b>Keep gaining Exp to level up...</b></div>
+            <div class="experience--card" onmouseenter="cardEnter(event)" onmouseleave="cardLeave(event)"
+                onclick="alert('The project was discontinued :( Maybe click other cards!')">
+                <div class="experience--card--content">
+                    <p>
+                        I co-launch the platform as a business attempt to offer bi-directional inter-city (Waterloo-GTA)
+                        dessert and bubble tea delivery service using
+                        carpool drivers, inspired by carpooling. I Developed a simple WeChat embedded app and a small
+                        NoSQL
+                        database to record orders effectively and managed
+                        customer service and communication for the business. Although the project was profitable, it was
+                        discontinued due to the graduation of partners.
+                    </p>
+                </div>
+                <div class="experience--card--cover"><img src="/src/images/teapool.png" alt="teapool icon"
+                        height="80%"></div>
+                <div class="experience--card--title"> Co-founder & Developer (2020) </div>
+            </div>
+
+            <div class="experience--card" onmouseenter="cardEnter(event)" onmouseleave="cardLeave(event)"
+                onclick="window.open('https://www.primegashunter.com/')">
+                <div class="experience--card--content">
+                    <p>
+                        This ongoing project was inspired by the rising gasoline price. There are communities sharing
+                        gas stations that give discount on real-time basis,
+                        and I and my friends determine to build a platform to share these information to help people
+                        save money on gas. The website is built with react/next.js
+                        as frontend, and backended by firebase for simplicity. The anticipated launch will be in 3
+                        months.
+                    </p>
+                </div>
+                <div class="experience--card--cover"><img src="/src/images/pgh.png" alt="primegashunter icon"
+                        width="80%">
+                </div>
+                <div class="experience--card--title"> Developer (2023) </div>
+            </div>
+        </div>
+
+        <div class="experience--explanation">
         </div>
     </section>
 </body>

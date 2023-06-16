@@ -1,0 +1,82 @@
+.experience{
+    overflow: scroll;
+    box-sizing: border-box;
+    padding-top: 10rem;
+}
+
+.experience--title{
+    position: fixed;
+    width: 100%;
+    font-family: 'Pacifico', cursive;
+    top:20rem;
+    font-size: 7rem;
+    z-index: 1;
+}
+
+.experience--cardContainer {
+    height: 100%;
+    width: 220%;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.experience--cardContainer::after {
+    content:"";
+    width: 1rem;
+}
+
+.experience--card {
+    flex-shrink: 0;
+    position: relative;
+    width: 50rem;
+    height: 90rem;
+    overflow: hidden;
+    box-shadow: 5px 2.5px 2.5px #c0c0c0;
+    border-radius: 5px;
+}
+
+.experience--card--title {
+    position: absolute;
+    background-color: #b19d92;
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+    left: 0;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.experience--card--cover {
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    background-color: rgb(217,214,214);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.experience--card--content{
+    font-size: 2.5rem;
+    position: absolute;
+    top: 40%;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.experience--card--content>p{
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+

@@ -12,11 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/styles/main.css">
-    <script src="/util/playaudio.js"></script>
     <script src="/util/shake.js"></script>
-    <script src="/util/carousel.js"></script>
     <script src="/util/menu.js"></script>
-    <script src="/util/swtichAudioIcon.js"></script>
+    <script src="/util/switchDetail.js"></script>
     <script src="https://kit.fontawesome.com/3c90380d92.js" crossorigin="anonymous"></script>
 </head>
 
@@ -63,18 +61,24 @@
         <div class="education--content">
             <strong class="education--content--title">2 majors + 1 minor</strong>
             <div class="education--degreeContainer">
-                <div>Computational Mathematics</div>
-                <div>Combinatorics & Optimization </div>
-                <div>Computing Minor </div>
+                <div id="CM" onclick="switchDetail(event)">Computational Mathematics</div>
+                <div id="CO" onclick="switchDetail(event)">Combinatorics & Optimization </div>
+                <div id="Minor" onclick="switchDetail(event)">Computing Minor </div>
             </div>
             <div class="education--content--detailContainer">
                 <span id="defaultMsg"> Click on the major specifications above to learn what all those about.</span>
-                <!-- <span id="CMInfo"> CM is Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</span>
-                <span id="COInfo"> CM is Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. </span>
-                <span id="MinorInfo"> Minor is Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</span> -->
+                <span id="CMInfo" style="display: none;"> 
+                    Computational Mathematics employ math and computer science to solve problems. In a time of big data and ever-increasing 
+                    computer power, Computational Mathematics methods are key drivers of progress and innovation in many areas.
+                </span>
+                <span id="COInfo" style="display: none;"> 
+                    CO focus on optimization problems, such as linear programming, game theory and graph theory. It also has close connections 
+                    with the theoretical computer science, in particular, the analysis of algorithms. 
+                </span>
+                <span id="MinorInfo" style="display: none;">
+                    Computing Minor is governed under the Cheriton School of computer science. It covers fundamental CS theories such as data 
+                    structures, functional programming(in Racket & C), Object-oriented programming (in C++), OS, and Database(SQL). 
+                </span>
             </div>
         </div>
     </section>

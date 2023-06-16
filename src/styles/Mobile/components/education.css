@@ -19,18 +19,6 @@
     display: block;
 }
 
-.education--imageSection::after {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    content: "";
-    display: block;
-    background-color: whitesmoke;
-    transform-origin: 50% 0;
-    transform: translateY(-.5px);
-    animation: flip-in 2s;
-}
-
 .education--imageSection--content {
     font-family: 'Pacifico', cursive;
     font-size: 5rem;
@@ -100,16 +88,6 @@
     display: block;
 }
 
-@keyframes float-up {
-    0% {
-        clip-path: polygon(0 0, 100 0, 100 1, 0 1);
-    }
-
-    100% {
-        height: 60%
-    }
-}
-
 @keyframes education-fade-in {
     0% {
         opacity: 0;
@@ -129,7 +107,7 @@
         opacity: 0;
     }
 
-    50% {
+    30% {
         opacity: 0;
     }
 
