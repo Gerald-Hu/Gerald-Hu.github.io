@@ -1,0 +1,16 @@
+#contact--image{
+    float: right;
+    margin: 1rem;
+}
+.contact{
+    position: relative;
+}
+
+.contact--content{
+    width: 100%;
+    height: 90%;
+    bottom: 0;
+    position: absolute;
+    background-color:#b19d92;
+    z-index: -1;
+}
