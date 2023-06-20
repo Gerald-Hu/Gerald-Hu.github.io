@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../../src/styles/main.css">
     <script src="/util/shake.js"></script>
     <script src="/util/menu.js"></script>
+    <script defer src="/util/form.js"></script>
     <script src="https://kit.fontawesome.com/3c90380d92.js" crossorigin="anonymous"></script>
 </head>
 
@@ -51,10 +52,31 @@
             </ul>
     </header>
     <section class="contact section">
-        <img id="contact--image" src="/src/images/arrow.png" alt="arrow" width="8%">
+        <img id="contact--image" src="/src/images/arrow.png" alt="arrow" width="6%">
         <div class="contact--content">
-            <div class="contact--content--form">form</div>
-            <div class="contact--content--text"> Send me an Email <br> Or <br> Leave me a message</div>
+            <div class="contact--content--form">
+                <form action="https://www.gerald-hu.web.app/message" method="post" id="message-form" onsubmit="
+                this.reset(); 
+                alert('Thank you for your message!')">
+                    <div class="form-group">
+                        <label for="nickname">Your Nickname*:</label>
+                        <input type="text" id="nickname" name="nickname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message*:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="contact--content--text"> Send me an Email <br> or <br> Leave me a message</div>
         </div>
 
     </section>
